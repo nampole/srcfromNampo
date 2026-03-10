@@ -2,14 +2,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
-
 def ReLU(x):
     return np.maximum(0, x)
-
 
 def tanh(x):
     return np.tanh(x)
@@ -18,6 +15,9 @@ input_data = np.random.randn(1000, 100)  # 1000個のデータ
 node_num = 100  # 各隠れ層のノード（ニューロン）の数
 hidden_layer_size = 5  # 隠れ層が5層
 activations = {}  # ここにアクティベーションの結果を格納する
+
+print("input_data.shape: " + str(input_data.shape))
+print("input_data: " + str(input_data))
 
 x = input_data
 
