@@ -1,4 +1,8 @@
 # coding: utf-8
+# 過学習を抑えるためのDropoutのテストコード
+# Dropoutは、学習の際にランダムにニューロンを無効化することで、過学習を抑制する手法です。
+# overfit = 過学習 overfitting
+
 import os
 import sys
 sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定

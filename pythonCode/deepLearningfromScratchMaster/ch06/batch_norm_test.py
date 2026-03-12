@@ -1,11 +1,19 @@
 # coding: utf-8
+# Batch Normalizationのテストコード
+
 import sys, os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+# sys.path.append(os.pardir)  # 부모 디렉토리의 경로를 sys.path에 추가
+sys.path.append(os.curdir)
+from ..dataset.mnist import load_mnist
+
+
+# import sys, os
+# sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
 import numpy as np
 import matplotlib.pyplot as plt
-from dataset.mnist import load_mnist
-from common.multi_layer_net_extend import MultiLayerNetExtend
-from common.optimizer import SGD, Adam
+# from dataset.mnist import load_mnist
+from ..common.multi_layer_net_extend import MultiLayerNetExtend
+from ..common.optimizer import SGD, Adam
 
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True)
 
