@@ -1,6 +1,8 @@
 # coding: utf-8
 import sys, os
 sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/..') # 상위 폴더인 경우
+
 import numpy as np
 import matplotlib.pyplot as plt
 from deep_convnet import DeepConvNet
